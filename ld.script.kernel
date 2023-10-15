@@ -1,0 +1,44 @@
+SECTIONS
+{
+	. = 0xB000;
+	.text :
+	{
+		*(.text)
+	}
+	.rodata :
+	{
+		*(.rodata)
+	}
+	.eh_frame :
+	{
+		*(.eh_frame)
+	}
+	.text.__x86.get_pc_thunk.ax :
+	{
+		*(.text.__x86.get_pc_thunk.ax)
+	}
+	.text.__x86.get_pc_thunk.bx : 
+	{
+		*(.text.__x86.get_pc_thunk.bx)
+	}
+	.text.__x86.get_pc_thunk.dx : 
+	{
+		*(.text.__x86.get_pc_thunk.dx)
+	}
+	.data :
+	{
+		*(.data)
+	}
+	.got.plt :
+	{
+		*(.got.plt)
+	}
+	.bss :
+	{
+		*(.bss)
+	} 
+	.comment : 
+	{
+		*(.comment)
+	}
+}
